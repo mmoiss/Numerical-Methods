@@ -8,7 +8,7 @@ double eval_function(double input){
 
 bool check_accuracy(double value, int requiredDecimals) {
     std::ostringstream out;
-    out.precision(requiredDecimals + 1); // +1 for the integer part
+    out.precision(requiredDecimals + 1);
     out << value;
     std::string strValue = out.str();
     
@@ -16,7 +16,7 @@ bool check_accuracy(double value, int requiredDecimals) {
     if (pos != std::string::npos) {
         return (strValue.length() - pos - 1) >= requiredDecimals;
     }
-    return false; // No decimal point found
+    return false;
 }
 
 double bisection(double lowerBound, double upperBound, int decimals){
